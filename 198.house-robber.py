@@ -15,9 +15,10 @@ class Solution:
         elif nl <= 2:
             return max(nums)
         
-        memo = [0] * nl
-        memo[0] = nums[0]
-        memo[1] = max(nums[0:2])
+        
+        a = nums[0]
+        b = max(nums[0:2])
+        mv = max(a, b)
         
         # This only needs previous two values. The whole memo array is not needed. 
         # Optimize by storing as a, b where a = memo[i-2], b = memo[i-1]
@@ -25,9 +26,13 @@ class Solution:
 
         for i in range(2, nl):
 
-            memo[i] = max (nums[i] + memo[i-2], memo[i-1])
+            c = max (nums[i] + a, b)
+            a = b
+            b = c
+
+            mv = max(mv, c)
         
-        return max(memo)
+        return mv
         
 # @lc code=end
 
