@@ -6,6 +6,12 @@
 
 # @lc code=start
 class Solution:
+    """The solution is based on dynamic programming. 
+    It fills the first row with 1's as there's only 1 possible way to get to each point (go right)
+    It also fills the first column with 1's as only 1 way to go down. 
+    The for each block it's a combination of just how many ways to get there (top + left)
+    Pick the last grid and the result should be there! It's done.
+    """
 
     def create2DGrid(self, rows, cols):
         return [ [0 for _ in range(cols)] for _ in range(rows) ]
