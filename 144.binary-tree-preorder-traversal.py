@@ -18,6 +18,19 @@ class Solution:
 
         return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
 
+"""
+   1
+2     3
+
+1 + pO(2) + pO(3)
+1 + 2 + _ + _ + pO(3)
+1 + 2 + _ + _ + 3 + pO(None) + pO(None)
+1 + 2 + _ + _ + 3 + _ + _
+[1 + 2 + 3]
+
+
+
+"""
         
 # @lc code=end
 
