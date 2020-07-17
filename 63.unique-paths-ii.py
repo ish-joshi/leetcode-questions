@@ -56,6 +56,10 @@ class Solution:
 
         return 0 if obstacleGrid[-1][-1] == -1 else obstacleGrid[-1][-1]
 
+"""
+[[0],[1]] --> 0
+"""
+
 # if __name__ == "__main__":
 #     Solution().uniquePathsWithObstacles([[0,0,0],[0,1,0],[0,0,0]])
 # @lc code=end
