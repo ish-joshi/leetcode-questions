@@ -10,8 +10,15 @@ class Solution:
         s = s.lower()
         s = s.replace(" ", "")
         s = list ( filter (lambda i: (ord('a') <= ord(i) <= ord('z')) or (ord('0') <= ord(i) <= ord('9')), s))
-        s = "".join(s)
-        return s == s[::-1]
+
         
+
+        s = "".join(s)
+
+        # print(s, s == s[::-1])
+        return s == s[::-1]
+
+# if __name__ == "__main__":
+#     Solution().isPalindrome("a,, 1 bc d dc B 1A")
 # @lc code=end
 
