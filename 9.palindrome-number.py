@@ -4,6 +4,8 @@
 # [9] Palindrome Number
 #
 
+# I have made a change
+
 # @lc code=start
 class Solution:
 
@@ -13,7 +15,6 @@ class Solution:
         sfied: str = str(x)
         rev = sfied[::-1]
         return sfied == rev
-    
-        
-# @lc code=end
 
+
+# @lc code=end
